@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>¿Cuánto sabes de mí?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+
+    <!-- Pantalla de inicio -->
+    <section id="pantalla-inicio" class="pantalla activa">
+      <h1 id="titulo">¿Cuánto sabes de mí?</h1>
+      <p class="intro" id="intro"></p>
+      <label for="nombre-jugador" class="etiqueta">Tu nombre</label>
+      <input id="nombre-jugador" type="text" maxlength="30" placeholder="Escribe tu nombre" autocomplete="off">
+      <button id="btn-empezar" class="btn">Empezar el quiz</button>
+      <p id="mejor-puntaje" class="mejor" hidden></p>
+    </section>
+
+    <!-- Pantalla de preguntas -->
+    <section id="pantalla-quiz" class="pantalla">
+      <div class="progreso" aria-hidden="true"><div id="barra"></div></div>
+      <p id="contador" class="contador"></p>
+      <h2 id="pregunta"></h2>
+      <div id="opciones" class="opciones"></div>
+      <p id="feedback" class="feedback" role="status"></p>
+      <button id="btn-siguiente" class="btn" hidden>Siguiente pregunta</button>
+    </section>
+
+    <!-- Pantalla de resultado -->
+    <section id="pantalla-final" class="pantalla">
+      <p class="etiqueta" id="final-nombre"></p>
+      <p class="puntaje"><span id="final-aciertos">0</span><small id="final-total"></small></p>
+      <h2 id="final-titulo"></h2>
+      <p id="final-mensaje" class="intro"></p>
+      <button id="btn-reiniciar" class="btn">Jugar otra vez</button>
+    </section>
+
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
